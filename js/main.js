@@ -8,3 +8,4 @@ import restartButton from 'restartButton';
 import scoreboard from 'scoreboard';
 import timer from 'timer';
 
+health.test
