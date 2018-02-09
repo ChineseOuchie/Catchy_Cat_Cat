@@ -1,5 +1,37 @@
-#game {
-    width: 200px;
-    height: 200px;
+#start_screen {
+    width: 500px;
+    height: 500px;
     border: 2px solid black;
+    background-image: url("../img/background.png");
+    background-position: center;
+}
+
+#game {
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    display: none;
+    background-image: url("../img/background2.png");
+    background-size: cover;
+}
+
+#title {
+    text-align: center;
+    font-family: personalFont;
+}
+
+#start_button {
+    font-family: personalFont;
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    margin-left: 148px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+@font-face {
+    font-family: personalFont;
+    src: url(../font/Hardpixel.OTF);
 }
