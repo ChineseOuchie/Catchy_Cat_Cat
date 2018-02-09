@@ -8,4 +8,4 @@ import * as health from './health.js';
 // import scoreboard from 'scoreboard';
 // import timer from 'timer';
 
-health.test();
+health.test()
