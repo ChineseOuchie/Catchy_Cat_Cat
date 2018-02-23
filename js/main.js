@@ -1,11 +1,11 @@
-// import cat from 'cat';
-// import basket from 'basket';
-// import bomb from 'bomb';
+// import * as cat from './cat.js';
+// import * as basket from './basket.js';
+// import * as bomb from './bomb.js';
 // import * as health from './health.js';
-// import music from 'music';
+// import * as music from './music.js';
 import * as playButton from './playButton.js';
-// import restartButton from 'restartButton';
-// import scoreboard from 'scoreboard';
+// import * as restartButton from './restartButton.js';
+// import * as scoreboard from './scoreboard.js';
 import * as timer from './timer.js';
 
 document.getElementById("start_button").addEventListener("click", playButton.start);
