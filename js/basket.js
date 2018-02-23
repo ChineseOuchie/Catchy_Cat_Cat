@@ -1,24 +1,40 @@
-// import * as main from './main.js';
-// const context = main.context;
-// const canvas = main.canvas;
-// function writeMessage(canvas, message) {
-//     context.context.clearRect(0, 0, canvas.width, canvas.height);
-//     context.context.font = '18pt Calibri';
-//     context.context.fillStyle = 'black';
-//     context.context.fillText(message, 10, 25);
-// }
-// function getMousePos(canvas, evt) {
-//     const rect = canvas.getBoundingClientRect();
-//     return {
-//         x: evt.clientX - rect.left,
-//         y: evt.clientY - rect.top
-//     };
-// }
-//
-// function mousePos(evt) {
-//     const mousePos = getMousePos(canvas, evt);
-//     const message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
-//     writeMessage(canvas, message);
-// }
-//
-// export {mousePos}
+const game = document.getElementById("game");
+const context = game.getContext("2d");
+
+let basketX = 140;
+let mand = new Image();
+//draw basket
+function basket() {
+
+    mand.src = '../img/pixelated_basked.png';
+    mand.onload = function(){
+        //img x y width height
+        context.drawImage(mand, basketX, 120, 20,20);
+
+    };
+}
+window.addEventListener("keydown", checkKeyPressed, false);
+
+function checkKeyPressed(e) {
+    if (e.keyCode == "37") {
+        if(basketX === 0 ){
+            basketX = 0
+        }else {
+            basketX = basketX - 20;
+            console.log(basketX);
+            context.clearRect(basketX,100,100,40);
+            context.drawImage(mand, basketX, 120, 20,20);
+        }
+    }
+    if (e.keyCode == "39") {
+        if(basketX >= 280 ){
+            basketX = 280
+        }else {
+            basketX = basketX + 20;
+            console.log(basketX);
+            context.clearRect(basketX,100,-200,50);
+            context.drawImage(mand, basketX, 120, 20,20);
+        }
+    }
+}
+export {basket};
