@@ -1,29 +1,12 @@
-// let timeLeft = 5;
-// let x = setInterval(timer,1000);
-// function timer() {
-//     timeLeft--;
-//     console.log(timeLeft);
-// }
-// if (timeLeft === 0){
-//     clearInterval(x);
-// }
-
-// const time = new Date(60).getTime();
-// let timer = setInterval(function () {
-//     let now = new Date().getTime();
-//     let countdown = time - now;
-//     let second = Math.floor((countdown % (1000 * 60)) / 1000);
-//     console.log(second);
-// },1000);
 
 const game = document.getElementById("game");
 const context = game.getContext("2d");
-const x = 30;
-const y = 40;
+const x = 10;
+const y = 20;
 let countdown;
 //click to begin
 document.getElementById('start_button').addEventListener('click', function(){
-    let seconds = 10;
+    let seconds = 2;
     clearInterval(countdown);
     const nu = Date.now();
     const over = nu + seconds * 1000;
@@ -56,8 +39,9 @@ document.getElementById('start_button').addEventListener('click', function(){
             }
             //game over
             if(secondsLeft === 0){
+                context.font = '30px personalFont';
                 context.clearRect(0, 0, game.width, game.height);
-                context.fillText('Game Over', x, y);
+                context.fillText('Game Over', 70, 50);
                 // document.getElementById('tijd').innerHTML = "Game Over";
             }
         }
