@@ -12,7 +12,7 @@ document.getElementById("start_button").addEventListener("click", playButton.sta
 document.getElementById('start_button').addEventListener('click', timer);
 const game = document.getElementById("game");
 const context = game.getContext("2d");
-export {game, context};
+
 // context.fillText(a, 10, 10);
 
 // document.getElementById('start_button').addEventListener('click', basket.mousePos);

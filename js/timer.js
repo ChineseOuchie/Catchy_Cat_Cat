@@ -15,15 +15,14 @@
 //     let second = Math.floor((countdown % (1000 * 60)) / 1000);
 //     console.log(second);
 // },1000);
-import * as main from './main.js';
+
 const game = document.getElementById("game");
 const context = game.getContext("2d");
 
-context.font="20px Georgia";
 let countdown;
 //click to begin
 document.getElementById('start_button').addEventListener('click', function(){
-    let seconds = 59;
+    let seconds = 10;
     clearInterval(countdown);
     const nu = Date.now();
     const over = nu + seconds * 1000;
@@ -46,15 +45,19 @@ document.getElementById('start_button').addEventListener('click', function(){
             document.getElementById('tijd').innerHTML = "Don't cheat the time";
 
         }else{
+            context.clearRect(0, 0, game.width, game.height);
             context.fillText(secondsLeft, 10, 10);
             //add '0' when < 10
             if(secondsLeft < 10){
-                document.getElementById('tijd').innerHTML = '0'+ secondsLeft;
-                console.log('b')
+                context.clearRect(0, 0, game.width, game.height);
+                context.fillText(`0 ${secondsLeft}`, 10, 10);
+                // document.getElementById('tijd').innerHTML = '0'+ secondsLeft;
             }
             //game over
             if(secondsLeft === 0){
-                document.getElementById('tijd').innerHTML = "Game Over";
+                context.clearRect(0, 0, game.width, game.height);
+                context.fillText('Game Over', 10, 10);
+                // document.getElementById('tijd').innerHTML = "Game Over";
             }
         }
     }
