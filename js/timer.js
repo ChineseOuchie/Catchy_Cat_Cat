@@ -33,12 +33,12 @@ document.getElementById('start_button').addEventListener('click', function(){
             return;
         }
         showTime(secondsLeft);
-    },1000)
+    },1000);
     //display time
     function showTime(secondsLeft){
         //anti cheat
         if(secondsLeft >= 60){
-            clearInterval(countdown)
+            clearInterval(countdown);
             document.getElementById('tijd').innerHTML = "Don't cheat the time";
 
         }else{
@@ -54,4 +54,4 @@ document.getElementById('start_button').addEventListener('click', function(){
             }
         }
     }
-})
+});
