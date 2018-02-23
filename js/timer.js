@@ -15,7 +15,11 @@
 //     let second = Math.floor((countdown % (1000 * 60)) / 1000);
 //     console.log(second);
 // },1000);
+import * as main from './main.js';
+const game = document.getElementById("game");
+const context = game.getContext("2d");
 
+context.font="20px Georgia";
 let countdown;
 //click to begin
 document.getElementById('start_button').addEventListener('click', function(){
@@ -42,7 +46,7 @@ document.getElementById('start_button').addEventListener('click', function(){
             document.getElementById('tijd').innerHTML = "Don't cheat the time";
 
         }else{
-                document.getElementById('tijd').innerHTML = secondsLeft;
+            context.fillText(secondsLeft, 10, 10);
             //add '0' when < 10
             if(secondsLeft < 10){
                 document.getElementById('tijd').innerHTML = '0'+ secondsLeft;
