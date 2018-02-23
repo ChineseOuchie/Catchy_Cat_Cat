@@ -1,30 +1,16 @@
-// let timeLeft = 5;
-// let x = setInterval(timer,1000);
-// function timer() {
-//     timeLeft--;
-//     console.log(timeLeft);
-// }
-// if (timeLeft === 0){
-//     clearInterval(x);
-// }
-
-// const time = new Date(60).getTime();
-// let timer = setInterval(function () {
-//     let now = new Date().getTime();
-//     let countdown = time - now;
-//     let second = Math.floor((countdown % (1000 * 60)) / 1000);
-//     console.log(second);
-// },1000);
-
+const game = document.getElementById("game");
+const context = game.getContext("2d");
+const x = 30;
+const y = 40;
 let countdown;
 //click to begin
 document.getElementById('start_button').addEventListener('click', function(){
-    let seconds = 59;
+    let seconds = 10;
     clearInterval(countdown);
     const nu = Date.now();
     const over = nu + seconds * 1000;
     showTime(seconds);
-    
+
     countdown = setInterval(
         function(){
         const secondsLeft = Math.round((over - Date.now()) / 1000);
@@ -42,15 +28,20 @@ document.getElementById('start_button').addEventListener('click', function(){
             document.getElementById('tijd').innerHTML = "Don't cheat the time";
 
         }else{
-                document.getElementById('tijd').innerHTML = secondsLeft;
+            context.clearRect(0, 0, game.width, game.height/2);
+            context.fillText(secondsLeft, x, y);
             //add '0' when < 10
             if(secondsLeft < 10){
-                document.getElementById('tijd').innerHTML = '0'+ secondsLeft;
-                console.log('b')
+                context.clearRect(0, 0, game.width, game.height/2);
+                context.fillText(`0 ${secondsLeft}`, x, y);
+                // document.getElementById('tijd').innerHTML = '0'+ secondsLeft;
             }
             //game over
             if(secondsLeft === 0){
-                document.getElementById('tijd').innerHTML = "Game Over";
+                context.font = '30px personalFont';
+                context.clearRect(0, 0, game.width, game.height);
+                context.fillText('Game Over', 70, 50);
+                // document.getElementById('tijd').innerHTML = "Game Over";
             }
         }
     }
