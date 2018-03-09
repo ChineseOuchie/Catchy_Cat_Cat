@@ -1,5 +1,5 @@
 // import { myGameArea } from "./canvas";
-export{component};
+export{component}
 
 
 function component(width, height, color, x, y) {

@@ -42,6 +42,10 @@ table {
     border-spacing: 0;
 }
 
+canvas {
+    border: 1px solid black;
+}
+
 /* css start
 @font-face {
     font-family: personalFont;
