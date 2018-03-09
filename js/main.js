@@ -10,9 +10,6 @@
 // import * as canvas from './canvas.js';
 // import * as component from './component.js';
 
-// export{myGamePiece};
-// export{startGame};
-
 let myGamePiece;
 
 function startGame() {
