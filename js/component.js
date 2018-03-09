@@ -1,7 +1,6 @@
 // import { myGameArea } from "./canvas";
 export{component};
 
-let myGamePiece;
 
 function component(width, height, color, x, y) {
     this.width = width;

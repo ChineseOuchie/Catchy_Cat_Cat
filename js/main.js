@@ -22,12 +22,9 @@ let myGamePiece;
 
 function startGame() {
     canvas.myGameArea.start();
-    myGamePiece = new component(30, 30, "red", 10, 120);
+    myGamePiece = new component.component(30, 30, "red", 10, 120);
 }
 
-function updateGameArea() {
-    component.myGameArea.clear();
-    component.myGamePiece.update();
-}
+
 
 startGame();    
