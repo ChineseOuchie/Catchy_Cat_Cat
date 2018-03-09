@@ -42,7 +42,7 @@ table {
     border-spacing: 0;
 }
 
-/*css start*/
+/* css start
 @font-face {
     font-family: personalFont;
     src: url(../font/Hardpixel.OTF);
@@ -83,4 +83,4 @@ body{
     margin-left: 148px;
     font-size: 20px;
     border: 2px solid black;
-}
+} */
