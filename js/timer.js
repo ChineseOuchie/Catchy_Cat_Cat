@@ -6,7 +6,7 @@ const y = 40;
 let countdown;
 
 const audio  = new Audio();
-audio.src = '../music/arcade_song.wav';
+audio.src = '../music/game_over.wav';
 //click to begin
 document.getElementById('start_button').addEventListener('click', function(){
     let seconds = 2;
@@ -46,6 +46,7 @@ document.getElementById('start_button').addEventListener('click', function(){
                 context.clearRect(0, 0, game.width, game.height);
                 context.fillText('Game Over', 70, 50);
                 playButton.endMusic();
+                audio.play();
                 // document.getElementById('tijd').innerHTML = "Game Over";
             }
         }
