@@ -10,6 +10,6 @@ So like we already said, it was a game we made using modules that were described
 
 ## Disclaimer
 
-This is just a small project for school. So don't expect it to update every week. and PLEASE don't expext this to become a game you will enjoy longer then 2 minutes. This was purely made for the purpose of school and nothing else. We will update this game when we feel like it. Because we're very busy with other school related stuff.
+This is just a small project for school. So don't expect it to update every week. and PLEASE don't expect this to become a game you will enjoy longer then 2 minutes. This was purely made for the purpose of school and nothing else. We will update this game when we feel like it. Because we're very busy with other school related stuff.
 
 
