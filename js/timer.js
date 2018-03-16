@@ -1,11 +1,15 @@
+import * as playButton from "./playButton.js";
 const game = document.getElementById("game");
 const context = game.getContext("2d");
 const x = 30;
 const y = 40;
 let countdown;
+
+const audio  = new Audio();
+audio.src = '../music/arcade_song.wav';
 //click to begin
 document.getElementById('start_button').addEventListener('click', function(){
-    let seconds = 10;
+    let seconds = 2;
     clearInterval(countdown);
     const nu = Date.now();
     const over = nu + seconds * 1000;
@@ -41,6 +45,7 @@ document.getElementById('start_button').addEventListener('click', function(){
                 context.font = '30px personalFont';
                 context.clearRect(0, 0, game.width, game.height);
                 context.fillText('Game Over', 70, 50);
+                playButton.endMusic();
                 // document.getElementById('tijd').innerHTML = "Game Over";
             }
         }
