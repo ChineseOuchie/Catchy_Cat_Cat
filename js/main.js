@@ -14,4 +14,5 @@ document.getElementById('start_button').addEventListener('click', timer);
 const game = document.getElementById("game");
 const context = game.getContext("2d");
 context.font = '20px personalFont';
+context.fillText('0.0.1', 10, 10);
 basket.basket();

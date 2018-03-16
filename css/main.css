@@ -52,6 +52,14 @@ body{
     justify-content: center;
     margin-top: 50px;
 }
+#game_version {
+    font-family: personalFont;
+    font-size: 10px;
+    text-align: right;
+    margin-top: 360px;
+    margin-right: 5px;
+}
+
 #start_screen {
     width: 500px;
     height: 500px;
