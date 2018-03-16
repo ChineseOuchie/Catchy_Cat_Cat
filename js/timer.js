@@ -1,15 +1,15 @@
 import * as playButton from "./playButton.js";
 const game = document.getElementById("game");
 const context = game.getContext("2d");
-const x = 30;
-const y = 40;
+const x = 10;
+const y = 20;
 let countdown;
 
 const audio  = new Audio();
 audio.src = '../music/game_over.wav';
 //click to begin
 document.getElementById('start_button').addEventListener('click', function(){
-    let seconds = 2;
+    let seconds = 59;
     clearInterval(countdown);
     const nu = Date.now();
     const over = nu + seconds * 1000;
